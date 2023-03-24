@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import "./partials/globalStyles";
+@import "./partials/typography";
+
+@import "./partials/buttons";
+
+@import "./partials/birthdayForm";
+@import "./partials/result";

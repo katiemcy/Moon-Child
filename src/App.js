@@ -1,6 +1,6 @@
-import './App.css';
+import './sass/index.scss';
 
-import UserSearch from './UserSearch';
+import UserSearch from './components/UserSearch';
 
 function App() {
   return (
