@@ -1,10 +1,12 @@
 const Form = (props) => {
-    console.log("rerendered Form")
+    // console.log("rerendered Form")
     const yearOptions = () => {
 
         let years = [];
 
-        for (let year = 2023; year >= 1923; year--) {
+        const today = new Date();
+        let thisYear = today.getFullYear();
+        for (let year = thisYear; year >= 1923; year--) {
             years.push(<option value={year} key={year}>{year}</option>)
         }
 
@@ -34,11 +36,7 @@ const Form = (props) => {
 
 
                 <form className="birthdayForm" onSubmit={props.handleSubmit}>
-                    {
-                        props.dayError
-                            ? <p><strong>Select a valid day</strong></p>
-                            : null
-                    }
+
 
                     <label htmlFor="birthYear" className="sr-only">Year</label> 
                     <select name="birthYear" id="birthYear" onChange={props.selectionChange} aria-describedby="error">
@@ -54,9 +52,24 @@ const Form = (props) => {
                     <select name="birthDay" id="birthDay" onChange={props.selectionChange} aria-describedby="error">
                         { dayMonthOptions(1, 31) }
                     </select>
+                    {
+                        props.futureChild
+                            ? <p className="futureChild visible">Hi there, future child</p>
+                            : <p className="futureChild hidden">Hi there, future child</p>
+                    }
 
+                    {
+                        props.formError
+                            ? <p className="dayError visible"><strong>Select a valid day</strong></p>
+                            : <p className="dayError hidden"><strong>Select a valid day</strong></p>
+                    }
+
+                    {
+                        props.formError || props.loadInfo === "first-load"
+                            ? <button className="hidden">Submit</button>
+                            : <button className="visible">Submit</button>
+                    }
                     
-                    <button>Submit</button>
                 </form>
             </div>
         </section>

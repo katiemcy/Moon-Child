@@ -9,6 +9,12 @@ body {
     font-family: $titleFont;
 }
 
+h1 {
+    @include fontSize (35);
+    font-family: $contentFont;
+    opacity: 0.7;
+}
+
 h2 {
     @include fontSize(22);
 }
@@ -19,4 +25,17 @@ select {
     option {
          font-family: $numberFont;
     }
+}
+
+p.dayError,
+p.futureChild {
+    @include fontSize(18);
+    font-family: $numberFont;
+    font-weight: 300;
+}
+p.dayError {
+    color: rgb(134, 43, 43);
+}
+p.futureChild {
+    color:rgb(55, 39, 128);
 }
