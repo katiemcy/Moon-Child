@@ -1,5 +1,6 @@
 const Form = (props) => {
-    const yearOptions = (props) => {
+    console.log("rerendered Form")
+    const yearOptions = () => {
 
         let years = [];
 
@@ -30,20 +31,27 @@ const Form = (props) => {
             <div className="wrapper">
                 <h2>What kind of moon child are you?</h2>
                 <p>Enter your birthday:</p>
+
+
                 <form className="birthdayForm" onSubmit={props.handleSubmit}>
+                    {
+                        props.dayError
+                            ? <p><strong>Select a valid day</strong></p>
+                            : null
+                    }
 
                     <label htmlFor="birthYear" className="sr-only">Year</label> 
-                    <select name="birthYear" id="birthYear" onChange={props.selectionChange}>
+                    <select name="birthYear" id="birthYear" onChange={props.selectionChange} aria-describedby="error">
                         { yearOptions () }
                     </select>
 
                     <label htmlFor="birthMonth" className="sr-only">Month</label> 
-                    <select name="birthMonth" id="birthMonth" onChange={props.selectionChange}>
+                    <select name="birthMonth" id="birthMonth" onChange={props.selectionChange} aria-describedby="error">
                         { dayMonthOptions(1, 12) }
                     </select>
 
                     <label htmlFor="birthDay" className="sr-only">Day</label> 
-                    <select name="birthDay" id="birthDay" onChange={props.selectionChange}>
+                    <select name="birthDay" id="birthDay" onChange={props.selectionChange} aria-describedby="error">
                         { dayMonthOptions(1, 31) }
                     </select>
 

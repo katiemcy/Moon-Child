@@ -1,4 +1,5 @@
 section.formSection {
+    width: 100%;
     text-align: center;
     p {
         margin: 0 auto;
@@ -6,11 +7,14 @@ section.formSection {
 }
 
 form.birthdayForm {
-    input {
-        margin: 10px auto;
+    margin: 8px auto;
+    select {
+        background-color: black;
+        border: none;
+        cursor: pointer;
     }
     button {
         display: block;
-        margin: 0 auto;
+        margin: 8px auto;
     }
 }
