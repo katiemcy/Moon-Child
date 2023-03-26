@@ -1,4 +1,4 @@
-import waxingCrescent from "../media/waxing-crescent.jpg";
+// import waxingCrescent from "../media/waxing-crescent.jpg";
 import moonVid from "../media/moon-phase-1-cycle.mp4";
 
 const Moon = () => {

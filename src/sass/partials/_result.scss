@@ -1,6 +1,31 @@
 section.result {
-    animation: fadeIn 0.5s ease-out;
-    p {
-        text-align: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+
+    .center {
+        position: fixed;
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        figure {
+            width: 50%;
+            margin: 0 auto;
+        }
+    
+        p {
+            text-align: center;
+            
+        }
     }
+
+}
+
+p.blackFont {
+    color: black;
+    font-weight: 300;
 }

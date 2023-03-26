@@ -8,6 +8,7 @@ import Result from "./Result";
 
 const UserSearch = () => {
     // console.log("rerender")
+
     const [ birthday, setBirthday ] = useState("first-load");
 
     const [ dayError, setDayError ] = useState(false);
@@ -40,6 +41,7 @@ const UserSearch = () => {
 
         const allSelections = e.target.parentElement;
 
+    // value of selected date
         const year = allSelections[0].value;
         const month = allSelections[1].value;
         const day = allSelections[2].value;
@@ -48,6 +50,7 @@ const UserSearch = () => {
 
 
         const today = new Date();
+        let thisYear = today.getFullYear();
         let thisMonth = today.getMonth() + 1;
         let thisDay = today.getDate();
 
@@ -57,7 +60,9 @@ const UserSearch = () => {
                 || year % 4 > 0 && month == "02" && day >= 29
                 || month == "04"  && day == 31|| month == "06"  && day == 31|| month == "09"  && day == 31|| month == "11" && day == 31){
                 throw new Error("Invalid date");
-            } else if (month > thisMonth || month == thisMonth && day > thisDay) {
+                // throw and catch might not be required
+            } else if (year >= thisYear && month > thisMonth 
+                ||year >= thisYear && month == thisMonth && day > thisDay) {
             // ***EASTER EGG***- future date handling -***EASTER EGG***
                 console.log("future child");
                 setDayError(false)
@@ -84,7 +89,13 @@ const UserSearch = () => {
 
     return (
         <main>
-            <Moon />
+
+            {
+                displayResult
+                ? null
+                : <Moon />
+            }
+            
 
             {
                 displayResult
