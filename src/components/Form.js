@@ -60,8 +60,8 @@ const Form = (props) => {
 
                     {
                         props.formError
-                            ? <p className="dayError visible"><strong>Select a valid day</strong></p>
-                            : <p className="dayError hidden"><strong>Select a valid day</strong></p>
+                            ? <p className="dayError visible"><strong>Invalid date</strong></p>
+                            : <p className="dayError hidden"><strong>Invalid date</strong></p>
                     }
 
                     {

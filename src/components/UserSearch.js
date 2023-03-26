@@ -5,9 +5,10 @@ import { useState } from "react";
 import Moon from "./Moon";
 import Form from "./Form";
 import Result from "./Result";
+import Quotes from "./Quotes";
 
 const UserSearch = () => {
-    // console.log("rerender")
+    console.log("rerender")
 
     const [ birthday, setBirthday ] = useState("first-load");
 
@@ -116,6 +117,13 @@ const UserSearch = () => {
                 : null
             }
             
+            {
+                displayResult
+                ? <Quotes />
+                : null
+            }
+            
+ 
         </main>
     )
 }
