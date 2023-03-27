@@ -45,7 +45,6 @@ header {
 
     &:hover{
         opacity: 1;
-        // transform: rotate(-30deg);
     }
 }
 .fa-moon.clicked {
@@ -55,15 +54,12 @@ header {
 
 .toggleNav {
     width: 0;
-    // opacity: 0;
     transform: translateX(-40px);
-    @include transition(1.5s);
+    @include transition(1.2s);
 }
 .toggleNav.clicked {
     width: 88%;
-    // opacity: 1;
     transform: translateX(5%);
-    // animation: menuFadeIn 1s ease-in-out;
 }
 
 .fa-star {
@@ -74,7 +70,7 @@ header {
 .fa-star.clicked {
     opacity: 1;
     transform: rotate(-186deg);
-    animation: starFadeIn 1.5s ease-in-out;
+    animation: starFadeIn 1.2s ease-in-out;
 }
 
 .navUl {
