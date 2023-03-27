@@ -1,8 +1,8 @@
-@use "./variables" as *;
+@use './variables' as *;
 
 button {
     color: white;
-    font-family: $titleFont;
+    font-family: $contentFont;
     font-weight: 300;
     background-color: black;
     border: none;

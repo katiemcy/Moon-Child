@@ -1,0 +1,97 @@
+
+@mixin transition($speed) {
+    transition: $speed ease-in-out; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    z-index: 5;
+
+}
+
+.headerFlex {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+        width: 40px;
+    }
+
+    .toggleNav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        overflow-x: hidden;
+        
+        .starIcon {
+            width: 8%;
+        }
+
+        nav {
+            width: 100%;
+        }
+    }
+}
+
+.fa-moon {
+    opacity: 0.7;
+    cursor: pointer;
+    @include transition(1.1s);
+
+    &:hover{
+        opacity: 1;
+        // transform: rotate(-30deg);
+    }
+}
+.fa-moon.clicked {
+    opacity: 1;
+    transform: rotate(-30deg);
+}
+
+.toggleNav {
+    width: 0;
+    // opacity: 0;
+    transform: translateX(-40px);
+    @include transition(1.5s);
+}
+.toggleNav.clicked {
+    width: 88%;
+    // opacity: 1;
+    transform: translateX(5%);
+    // animation: menuFadeIn 1s ease-in-out;
+}
+
+.fa-star {
+    opacity: 0;
+    font-size: 0.8rem;
+    @include transition(1.5s);
+}
+.fa-star.clicked {
+    opacity: 1;
+    transform: rotate(-186deg);
+    animation: starFadeIn 1.5s ease-in-out;
+}
+
+.navUl {
+    opacity: 0;
+    @include transition(1s);
+}
+.navUl.clicked {
+    opacity: 1;
+    animation: menuFadeIn 1s ease-in-out;
+}
+
+nav {
+    ul {
+        display: flex;
+        width: 79%;
+        li {
+            flex-grow: 5;
+        }
+    }
+}

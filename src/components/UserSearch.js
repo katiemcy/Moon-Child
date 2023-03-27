@@ -7,7 +7,7 @@ import Form from "./Form";
 import Result from "./Result";
 
 const UserSearch = () => {
-    // console.log("rerender")
+    console.log("rerender")
 
     const [ birthday, setBirthday ] = useState("first-load");
 
