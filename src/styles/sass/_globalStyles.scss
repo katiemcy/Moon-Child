@@ -40,10 +40,20 @@ img {
 
 a {
     color: white;
+    transition: 0.1s;
+    &:hover,
+    &:focus {
+        color:rgb(97, 162, 223);
+    }
 }
 
 .wrapper {
     width: 85%;
     max-width: 1250px;
     margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    animation: fadeIn 0.5s ease-out;
 }

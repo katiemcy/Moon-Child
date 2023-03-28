@@ -21,12 +21,13 @@ const UserSearch = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(process.env.REACT_APP_API_KEY);
 
     // this api mentioned a 10 year rule on the dt, but it seems to work fine after testing a couple of day in earlier years (compared to data from other moon phase generaters)
         axios({
             url: "http://api.weatherapi.com/v1/astronomy.json",
             params: {
-                key: "7ae6990957f44017bcd150624232103",
+                key: '7ae6990957f44017bcd150624232103',
                 q: "Toronto",
                 dt: birthday
             }
@@ -34,7 +35,7 @@ const UserSearch = () => {
 
             setMoonPhase(apiData.data.astronomy.astro.moon_phase)
             setDisplayResult(true);
-        });
+        }).catch(() => { console.log("birthday retrive failed")});
     }
 
     const handleChange = (e) => {

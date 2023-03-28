@@ -1,11 +1,11 @@
 const Credit = () => {
     return (
         <section className="credit">
-            {/* <h2>Credit</h2>
-            <p>NASA for moon phase images</p> */}
-
-            <p>Coming Soon</p>
-        </ section>
+            <div className="wrapper">
+                <h2>Credit to :</h2>
+                <p>NASA's Scientific Visualization Studio - Moon Phase Visuals</p>
+            </div>
+        </section>
     )
 }
 

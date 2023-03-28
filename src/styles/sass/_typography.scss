@@ -52,3 +52,11 @@ nav {
         text-transform: lowercase;
     }
 }
+
+footer {
+    p {
+        @include fontSize(18);
+        text-align: center;
+        opacity: 0.4;
+    }
+}

@@ -30,13 +30,14 @@ const Header = () => {
                     <nav>
                         <ul className={clicked? "navUl clicked": "navUl" }>
                             <li>
-                                <Link to="/">Home</Link>
+                                {/* <Link to="/" onClick={handleClick}>Home</Link> */}
+                                <a href="/">Home</a>
                             </li>
                             <li>
-                                <Link to="/credit">Quotes</Link>
+                                <Link to="/comingSoon" onClick={handleClick}>Commonspace</Link>
                             </li>
                             <li>
-                                <Link to="/credit">Credit</Link>
+                                <Link to="/credit" onClick={handleClick}>Credit</Link>
                             </li>
                         </ul>
                     </nav> 
