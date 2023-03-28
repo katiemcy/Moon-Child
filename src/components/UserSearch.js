@@ -25,7 +25,7 @@ const UserSearch = () => {
 
     // this api mentioned a 10 year rule on the dt, but it seems to work fine after testing a couple of day in earlier years (compared to data from other moon phase generaters)
         axios({
-            url: "http://api.weatherapi.com/v1/astronomy.json",
+            url: "https://api.weatherapi.com/v1/astronomy.json",
             params: {
                 key: '7ae6990957f44017bcd150624232103',
                 q: "Toronto",
