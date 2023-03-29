@@ -104,13 +104,10 @@ nav {
 div.menuBg{
     width: 100vh;
     height: 100vh;
+    background-color: black;
+    border: white 1px solid;
     position: fixed;
     top: 0;
-    background-color: white;
-    clip-path: circle(0% at 0 0);
-    transition: 1.4s ease-in-out;
+    clip-path: circle(0% at 5% 5%);
+    transition: 1.2s ease-in-out;
 } 
-
-div.top.menuBg {
-    mix-blend-mode: difference;
-}

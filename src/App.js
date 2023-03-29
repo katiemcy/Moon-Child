@@ -36,9 +36,7 @@ function App() {
         </div>
       </footer>
       
-    {/* These two divs are for nav bar menu effect */}
       <div className={clicked? "menuBg clicked" : "menuBg"}></div> 
-      <div className={clicked? "top menuBg clicked" : "top menuBg"}></div>
     </div>
   );
 }
