@@ -1,0 +1,89 @@
+@media (max-width: 1024px){
+// Nav bar
+    nav{
+        ul {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+// Nav bar display
+    .headerFlex {
+        // height: 100vh;
+        align-items: normal;
+        h1 {
+            align-self: center;
+        }
+        .toggleNav {
+            // height: 50vh;
+            flex-direction: column;
+            align-self: flex-start;
+            overflow: visible;
+            justify-content: center;
+            height: 25vh;
+            transform: translateX(0);
+        }
+    }
+
+
+    .toggleNav.clicked {
+        width: 78%;
+        height: 77vh;
+    }
+
+    .starIcon {
+        height: 30%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    nav {
+        height: 100%;
+        padding-top: 40px;
+        ul {
+            height: 100%;
+            flex-direction: column;
+            li {
+                text-align: center;
+            }
+        }
+    }
+
+    div.menuBg.clicked {
+        clip-path: circle(90% at 0 0);
+    }
+
+// Home moon display
+    .moonVisual {
+        figure {
+            display: block;
+            width: 215%;
+            img {
+                transform: translateY(-10%);
+            }
+        }
+    }
+
+// Birthday form 
+    section.formSection {
+        position: absolute;
+        top: 45%;
+
+        form.birthdayForm {
+            select {
+                background-color: transparent;
+            }
+        }
+    }
+
+// Result moon display
+    section.result {
+        .center {
+            figure {
+                width: 94%;
+            }
+        }
+    }
+}

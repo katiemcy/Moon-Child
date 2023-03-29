@@ -36,6 +36,8 @@ h2 {
 img {
     display: block;
     width: 100%;
+    max-width: 100%;
+    max-height: 100%;;
 }
 
 a {
@@ -55,5 +57,5 @@ a {
 
 section {
     width: 100%;
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 1s ease-out;
 }

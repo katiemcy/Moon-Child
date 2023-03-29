@@ -1,16 +1,29 @@
 
 .moonVisual {
+    position: relative;
     width: 60%;
     margin: 0 auto;
-    flex-basis: 20%;
+    flex-basis: 40vh;
+    transition: 1s ease-out;
 
     figure {
-        width: 33%;
+        display: none;
+        position: absolute;
+        max-height: 100%;
+        width: 60%;
         margin: 0 auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
     
     video {
+        position: absolute;
+        max-height: 100%;
         width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }
 

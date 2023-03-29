@@ -57,13 +57,16 @@ const UserSearch = () => {
 
         try {
             // invalid date handling
-            if (year % 4 == 0 && month == "02" && day >= 30 
-                || year % 4 > 0 && month == "02" && day >= 29
-                || month == "04"  && day == 31|| month == "06"  && day == 31|| month == "09"  && day == 31|| month == "11" && day == 31){
+            if ((year % 4 == 0 && month == "02" && day >= 30) 
+                || (year % 4 > 0 && month == "02" && day >= 29)
+                || (month == "04"  && day == 31)
+                || (month == "06"  && day == 31)
+                || (month == "09"  && day == 31)
+                || (month == "11" && day == 31)){
                 throw new Error("Invalid date");
                 // throw and catch might not be required
-            } else if (year >= thisYear && month > thisMonth 
-                ||year >= thisYear && month == thisMonth && day > thisDay) {
+            } else if ((year == thisYear && month > thisMonth) 
+                        ||(year == thisYear && month == thisMonth && day > thisDay)) {
             // ***EASTER EGG***- future date handling -***EASTER EGG***
                 console.log("future child");
                 setDayError(false)
@@ -75,8 +78,6 @@ const UserSearch = () => {
                 setDayError(false);
                 setBirthday(birthday);
             }
-
-
         } catch (error) {
             console.log(error);
 
@@ -89,7 +90,7 @@ const UserSearch = () => {
 
 
     return (
-        <main>
+        <>
 
             {
                 displayResult
@@ -102,12 +103,12 @@ const UserSearch = () => {
                 displayResult
                 ? null
                 : <Form 
-                handleSubmit={handleSubmit}
-                selectionChange={handleChange}
-                formError={dayError}
-                loadInfo={birthday}
-                futureChild={futureChild}
-            />
+                        handleSubmit={handleSubmit}
+                        selectionChange={handleChange}
+                        formError={dayError}
+                        loadInfo={birthday}
+                        futureChild={futureChild}
+                    />
             }
             
 
@@ -117,7 +118,7 @@ const UserSearch = () => {
                 : null
             }
             
-        </main>
+        </>
     )
 }
 
