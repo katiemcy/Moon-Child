@@ -1,27 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@use "./sass/variables";
+@use "./sass/globalStyles";
+@use "./sass/typography";
+@use "./sass/keyframes";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@use "./sass/layout";
 
-@import "./partials/globalStyles";
-@import "./partials/typography";
-@import "./partials/keyframes";
+@use "./sass/buttons";
 
-@import "./partials/layout";
+@use "./sass/header";
+@use "./sass/moonImg";
+@use "./sass/birthdayForm";
+@use "./sass/result";
+@use "./sass/credit";
 
-@import "./partials/buttons";
+@use "./sass/comingSoon";
 
-@import "./partials/header";
-@import "./partials/moonImg";
-@import "./partials/birthdayForm";
-@import "./partials/result";
-@import "./partials/siblingQuotes";
+@use "./sass/mediaQuery";

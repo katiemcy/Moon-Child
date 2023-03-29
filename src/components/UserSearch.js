@@ -9,6 +9,7 @@ import Quotes from "./Quotes";
 
 const UserSearch = () => {
     console.log("rerender")
+    console.log("rerender")
 
     const [ birthday, setBirthday ] = useState("first-load");
 
@@ -22,12 +23,13 @@ const UserSearch = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(process.env.REACT_APP_API_KEY);
 
     // this api mentioned a 10 year rule on the dt, but it seems to work fine after testing a couple of day in earlier years (compared to data from other moon phase generaters)
         axios({
-            url: "http://api.weatherapi.com/v1/astronomy.json",
+            url: "https://api.weatherapi.com/v1/astronomy.json",
             params: {
-                key: "7ae6990957f44017bcd150624232103",
+                key: '7ae6990957f44017bcd150624232103',
                 q: "Toronto",
                 dt: birthday
             }
@@ -35,7 +37,7 @@ const UserSearch = () => {
 
             setMoonPhase(apiData.data.astronomy.astro.moon_phase)
             setDisplayResult(true);
-        });
+        }).catch(() => { console.log("birthday retrive failed")});
     }
 
     const handleChange = (e) => {
@@ -57,13 +59,16 @@ const UserSearch = () => {
 
         try {
             // invalid date handling
-            if (year % 4 == 0 && month == "02" && day >= 30 
-                || year % 4 > 0 && month == "02" && day >= 29
-                || month == "04"  && day == 31|| month == "06"  && day == 31|| month == "09"  && day == 31|| month == "11" && day == 31){
+            if ((year % 4 == 0 && month == "02" && day >= 30) 
+                || (year % 4 > 0 && month == "02" && day >= 29)
+                || (month == "04"  && day == 31)
+                || (month == "06"  && day == 31)
+                || (month == "09"  && day == 31)
+                || (month == "11" && day == 31)){
                 throw new Error("Invalid date");
                 // throw and catch might not be required
-            } else if (year >= thisYear && month > thisMonth 
-                ||year >= thisYear && month == thisMonth && day > thisDay) {
+            } else if ((year == thisYear && month > thisMonth) 
+                        ||(year == thisYear && month == thisMonth && day > thisDay)) {
             // ***EASTER EGG***- future date handling -***EASTER EGG***
                 console.log("future child");
                 setDayError(false)
@@ -75,8 +80,6 @@ const UserSearch = () => {
                 setDayError(false);
                 setBirthday(birthday);
             }
-
-
         } catch (error) {
             console.log(error);
 
@@ -89,7 +92,7 @@ const UserSearch = () => {
 
 
     return (
-        <main>
+        <>
 
             {
                 displayResult
@@ -102,12 +105,12 @@ const UserSearch = () => {
                 displayResult
                 ? null
                 : <Form 
-                handleSubmit={handleSubmit}
-                selectionChange={handleChange}
-                formError={dayError}
-                loadInfo={birthday}
-                futureChild={futureChild}
-            />
+                        handleSubmit={handleSubmit}
+                        selectionChange={handleChange}
+                        formError={dayError}
+                        loadInfo={birthday}
+                        futureChild={futureChild}
+                    />
             }
             
 

@@ -7,7 +7,9 @@ import waxingGibbous from "../media/waxing-gibbous.jpg";
 import lastQuarter from "../media/last-quarter.jpg";
 import waningCrescent from "../media/waning-crecsent.jpg";
 
+
 const Result = (props) => {
+
     const returnFig = () => {
         console.log(props.phaseName)
         const phaseImg = [
