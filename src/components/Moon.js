@@ -5,11 +5,9 @@ import newMoon from "../media/new-moon.jpg";
 const Moon = () => {
     return (
             <div className="moonVisual">
-                {/* <div className="moonVid"> */}
-                    <video muted loop autoPlay={true}>
-                        <source src={moonVid} type="video/mp4"/>
-                    </video>
-                {/* </div> */}
+                <video muted loop autoPlay={true} alt="time lapse of moon phase change"> 
+                    <source src={moonVid} type="video/mp4"/>
+                </video>
                 <figure className="moon"><img src={newMoon} alt="new moon" /></figure>
             </div>
     )

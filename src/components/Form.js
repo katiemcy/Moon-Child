@@ -1,5 +1,5 @@
 const Form = (props) => {
-    // console.log("rerendered Form")
+
     const yearOptions = () => {
 
         let years = [];
@@ -52,6 +52,7 @@ const Form = (props) => {
                     <select name="birthDay" id="birthDay" onChange={props.selectionChange} aria-describedby="error">
                         { dayMonthOptions(1, 31) }
                     </select>
+                    
                     {
                         props.futureChild
                             ? <p className="futureChild visible">Hi there, future child</p>

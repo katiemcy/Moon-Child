@@ -7,7 +7,6 @@ import Form from "./Form";
 import Result from "./Result";
 
 const UserSearch = () => {
-    console.log("rerender")
 
     const [ birthday, setBirthday ] = useState("first-load");
 
@@ -21,13 +20,12 @@ const UserSearch = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(process.env.REACT_APP_API_KEY);
 
-    // this api mentioned a 10 year rule on the dt, but it seems to work fine after testing a couple of day in earlier years (compared to data from other moon phase generaters)
+    // this api mentioned a 10 year rule on the dt, but it seems to work fine after testing a couple of day in earlier years (compared to data from other moon phase generators)
         axios({
             url: "https://api.weatherapi.com/v1/astronomy.json",
             params: {
-                key: '7ae6990957f44017bcd150624232103',
+                key: process.env.REACT_APP_API_KEY,
                 q: "Toronto",
                 dt: birthday
             }
@@ -49,7 +47,6 @@ const UserSearch = () => {
 
         const birthday = `${allSelections[0].value}-${allSelections[1].value}-${allSelections[2].value}`;
 
-
         const today = new Date();
         let thisYear = today.getFullYear();
         let thisMonth = today.getMonth() + 1;
@@ -68,7 +65,6 @@ const UserSearch = () => {
             } else if ((year == thisYear && month > thisMonth) 
                         ||(year == thisYear && month == thisMonth && day > thisDay)) {
             // ***EASTER EGG***- future date handling -***EASTER EGG***
-                console.log("future child");
                 setDayError(false)
                 setFutureChild(true)
                 setBirthday(birthday);
@@ -79,15 +75,11 @@ const UserSearch = () => {
                 setBirthday(birthday);
             }
         } catch (error) {
-            console.log(error);
-
             setFutureChild(false)
             setDayError(true);
             setBirthday("");
         }
-
     }
-
 
     return (
         <>
@@ -98,7 +90,6 @@ const UserSearch = () => {
                 : <Moon />
             }
             
-
             {
                 displayResult
                 ? null
@@ -110,7 +101,6 @@ const UserSearch = () => {
                         futureChild={futureChild}
                     />
             }
-            
 
             {
                 displayResult
