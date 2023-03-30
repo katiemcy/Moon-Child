@@ -1,0 +1,33 @@
+section.formSection {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    flex-basis: 20vh;
+    p {
+        margin: 0 auto;
+    }
+}
+
+form.birthdayForm {
+    margin: 8px auto;
+    select {
+        background-color: black;
+        border: none;
+        cursor: pointer;
+    }
+    button {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+p.dayError {
+    margin: 8px auto;
+}
+
+p.futureChild {
+    position: absolute;
+    left: 0;
+    right: 0
+}

@@ -1,0 +1,71 @@
+@use '../variables' as *;
+
+@mixin fontSize($sizeValue) {
+    font-size: ($sizeValue/20) * 1rem;
+  }
+
+body {
+    color: white;
+    font-family: $contentFont;
+}
+
+h2 {
+    @include fontSize(22);
+}
+
+select {
+    color: white;
+    font-family: $numberFont;
+    option {
+         font-family: $numberFont;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    li {
+        @include fontSize(26);
+        font-family: $menuFont;
+        font-style: italic;
+        letter-spacing: 2px;
+        text-transform: lowercase;
+    }
+}
+
+footer {
+    p {
+        @include fontSize(18);
+        text-align: center;
+        opacity: 0.4;
+    }
+}
+
+.logo {
+    @include fontSize (35);
+    text-align: center;
+}
+
+p.dayError,
+p.futureChild {
+    @include fontSize(18);
+    font-family: $numberFont;
+    font-weight: 300;
+}
+p.dayError {
+    color: rgb(134, 43, 43);
+}
+p.futureChild {
+    color:rgb(55, 39, 128);
+}
+
+
+.result p {
+    font-weight: 600;
+    opacity: 0.6;
+}
+p.blackFont {
+    color: black;
+}

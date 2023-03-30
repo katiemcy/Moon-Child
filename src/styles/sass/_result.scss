@@ -1,0 +1,25 @@
+section.result {
+    position: fixed;
+    height: 100vh;
+
+    .center {
+        position: fixed;
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        figure {
+            width: 50%;
+            margin: 0 auto;
+        }
+    
+        p {
+            text-align: center;
+            
+        }
+    }
+
+}
+

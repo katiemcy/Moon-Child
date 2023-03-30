@@ -1,0 +1,18 @@
+@use "./sass/variables";
+@use "./sass/layout/globalStyles";
+@use "./sass/layout/typography";
+@use "./sass/components/keyframes";
+
+@use "./sass/layout/layout";
+
+@use "./sass/components/buttons";
+
+@use "./sass/components/header";
+@use "./sass/moonImg";
+@use "./sass/birthdayForm";
+@use "./sass/result";
+@use "./sass/credit";
+
+@use "./sass/components/comingSoon";
+
+@use "./sass/layout/mediaQuery";
