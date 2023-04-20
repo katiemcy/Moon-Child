@@ -18,7 +18,7 @@ So, here are the initial wireframes that I established using Figma. You will als
 View on Figma: https://www.figma.com/file/QY9I4yqE4aqVrmnbqKocok/Moon-Child-App?node-id=0%3A1&t=u6Ls2ShE20nyC4Wl-1
 
 ### `MoonImg.js`
-My plan is to have the moon image (or video) display dynamically according to user's location within the page. Therefore I've put the moon visual into it's own component. Currently, different moon phase images are displayed based on the result. I'm working on improving the delivery of moon visual to enhance a smoother user experience.
+My plan is to have the moon image (or video on wider screens) display dynamically according to user's location within the page. Therefore I've put the moon visual into it's own component. Currently, different moon phase images are displayed based on the result. I'm working on improving the delivery of moon visual to enhance a smoother user experience.
 
 ## App Tree
 Below is the component structure of Moon Child. I've also included some pseudo codes in the map for ease of referencing.
