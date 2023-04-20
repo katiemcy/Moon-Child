@@ -1,6 +1,6 @@
 # Welcome to Moon Child!🌛 
 
-Hi! My name is Katie and I'm the developer of Moon Child. This is my first solo project during my time at the web development immersive bootcamp. 
+Hi! My name is Katie and I'm the developer of Moon Child. This is my first solo project during my time at the web development immersive bootcamp in Juno College of Technology. 
 
 Moon Child a React web application that shows users the moon phase on their selected date. In this document, I'm going to walk you through how I organized my ideas and developed this app from scratch.
 
