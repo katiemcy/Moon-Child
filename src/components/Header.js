@@ -19,8 +19,11 @@ const Header = (props) => {
                             <li>
                                 <a href="/">Home</a>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to="/comingSoon" onClick={props.handleClick}>C-space</Link>
+                            </li> */}
+                            <li>
+                                <Link to="/about" onClick={props.handleClick}>About</Link>
                             </li>
                             <li>
                                 <Link to="/credit" onClick={props.handleClick}>Credit</Link>

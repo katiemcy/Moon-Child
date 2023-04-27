@@ -6,7 +6,8 @@ import { useState } from 'react';
 import Header from './components/Header';
 import UserSearch from './components/UserSearch';
 import Credit from './components/Credit';
-import ComingSoon from './components/ComingSoon'
+import ComingSoon from './components/ComingSoon';
+import About from './components/About';
 
 function App() {
   const [ clicked, setClicked ] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={ <UserSearch /> } />
+          <Route path="/about" element={ <About /> } />
           <Route path="/comingSoon" element={ <ComingSoon />} />
           <Route path="/credit" element={ <Credit /> } />
         </Routes>

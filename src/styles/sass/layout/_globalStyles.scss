@@ -12,6 +12,7 @@ html {font-size: 125%;}
 
 body {
     background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
 }
 
 ul {
@@ -59,3 +60,4 @@ section {
     width: 100%;
     animation: fadeIn 1s ease-out;
 }
+
