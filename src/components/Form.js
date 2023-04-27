@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Form = (props) => {
 
     const yearOptions = () => {
@@ -31,7 +33,7 @@ const Form = (props) => {
     return (
         <section className="formSection">
             <div className="wrapper">
-                <h2>What kind of moon child are you?</h2>
+                <h2>What kind of moon child <Link to="/about" className='aboutLink'>&#9432;</Link> are you?</h2>
                 <p>Enter your birthday:</p>
 
 
