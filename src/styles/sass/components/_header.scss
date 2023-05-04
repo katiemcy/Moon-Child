@@ -16,9 +16,9 @@ header {
     justify-content: flex-start;
     align-items: center;
 
-    h1 {
-        width: 40px;
-    }
+    // .logo {
+    //     width: 40px;
+    // }
 
     .toggleNav {
         height: 100%;
@@ -52,60 +52,40 @@ nav {
     }
 }
 
-.fa-moon {
-    mix-blend-mode: difference;
-    opacity: 0.7;
-    cursor: pointer;
-    @include transition(1.1s);
-
-    &:hover{
-        opacity: 1;
-    }
-
-    &:after {
-        color: white;
-    }
-}
-.fa-moon.clicked {
-    opacity: 1;
-    transform: rotate(-30deg);
-}
-
 .toggleNav {
     width: 0;
     transform: translateX(-40px);
     @include transition(1.2s);
-}
-.toggleNav.clicked {
-    width: 88%;
-    transform: translateX(5%);
+    &.clicked {
+        width: 88%;
+        transform: translateX(5%);
+    }
 }
 
 .fa-star {
     opacity: 0;
     font-size: 0.8rem;
     @include transition(1.5s);
-}
-.fa-star.clicked {
-    opacity: 1;
-    transform: rotate(-186deg);
-    animation: starFadeIn 1.2s ease-in-out;
+    &.clicked {
+        opacity: 1;
+        transform: rotate(-186deg);
+        animation: starFadeIn 1.2s ease-in-out;
+    }
 }
 
 .navUl {
     opacity: 0;
     @include transition(1s);
-}
-.navUl.clicked {
-    opacity: 1;
-    animation: menuFadeIn 1s ease-in-out;
+    &.clicked {
+        opacity: 1;
+        animation: menuFadeIn 1s ease-in-out;
+    }
 }
 
 div.menuBg{
     width: 100vh;
     height: 100vh;
     background-color: black;
-    border: white 1px solid;
     position: fixed;
     top: 0;
     clip-path: circle(0% at 5% 5%);

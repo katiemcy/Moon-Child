@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Welcome to Moon Child!🌛 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi! My name is Katie and I'm the developer of Moon Child. This is my first solo project during my time at the web development immersive bootcamp in Juno College of Technology. 
 
-## Available Scripts
+Moon Child a React web application that shows users the moon phase on their selected date. In this document, I'm going to walk you through how I organized my ideas and developed this app from scratch.
 
-In the project directory, you can run:
 
-### `npm start`
+## Wireframes
+The minimum viable goal of this project is: 
+- to allow users to select a date, which would trigger an API call from the WeatherAPI on submission.
+- the API call would then return the astronomy data of the selected date, which include the desired moon phase data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+So, here are the initial wireframes that I established using Figma. You will also find how I structured the page into components. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="planning/moon-child-wireframe-01.png " alt="wireframe of moon child" title="Moon Child Wireframe (main page)">
+<img src="planning/moon-child-wireframe-02.png " alt="wireframe of moon child" title="Moon Child Wireframe (result page)">
 
-### `npm test`
+View on Figma: https://www.figma.com/file/QY9I4yqE4aqVrmnbqKocok/Moon-Child-App?node-id=0%3A1&t=u6Ls2ShE20nyC4Wl-1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `MoonImg.js`
+My plan is to have the moon image (or video on wider screens) display dynamically according to user's location within the page. Therefore I've put the moon visual into it's own component. Currently, different moon phase images are displayed based on the result. I'm working on improving the delivery of moon visual to enhance a smoother user experience.
 
-### `npm run build`
+## App Tree
+Below is the component structure of Moon Child. I've also included some pseudo codes in the map for ease of referencing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="planning/moon-child-app-tree.png " alt="app tree of Moon Child" title="Moon Child App Tree">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+View on Figma: https://www.figma.com/file/H54uOYPgY313tdgCO2PYF0/Moon-Child-AppTree?t=u6Ls2ShE20nyC4Wl-0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Coming Soon
+### `C-Space (name to be confirmed)`
+C-space is a feature where you get to generate words of encouragement to other Moon Child of your kind. This will be done via Firebase real time database, which stores pre-generated sentences that users can choose from. User generated quotes will be saved to the database and displayed accordingly. Stay tuned!

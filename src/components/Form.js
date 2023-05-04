@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
+
 const Form = (props) => {
-    // console.log("rerendered Form")
+
     const yearOptions = () => {
 
         let years = [];
@@ -31,7 +33,7 @@ const Form = (props) => {
     return (
         <section className="formSection">
             <div className="wrapper">
-                <h2>What kind of moon child are you?</h2>
+                <h2>What kind of moon child <Link to="/about" className='aboutLink'>&#9432;</Link> are you?</h2>
                 <p>Enter your birthday:</p>
 
 
@@ -52,6 +54,7 @@ const Form = (props) => {
                     <select name="birthDay" id="birthDay" onChange={props.selectionChange} aria-describedby="error">
                         { dayMonthOptions(1, 31) }
                     </select>
+                    
                     {
                         props.futureChild
                             ? <p className="futureChild visible">Hi there, future child</p>

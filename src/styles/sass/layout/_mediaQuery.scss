@@ -11,7 +11,7 @@
 @media (max-width: 500px) {
 // Nav bar display
     .headerFlex {
-        // height: 100vh;
+        position: relative;
         align-items: normal;
         h1 {
             align-self: center;
@@ -27,9 +27,8 @@
         }
     }
 
-
     .toggleNav.clicked {
-        width: 78%;
+        width: calc(100% - 83.1px);
         height: 77vh;
     }
 
@@ -56,6 +55,10 @@
     }
 
 // Home moon display
+    main {
+        position: relative;
+        overflow-x: clip;
+    }
     .moonVisual {
         figure {
             display: block;

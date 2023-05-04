@@ -1,6 +1,7 @@
 section.result {
     position: fixed;
     height: 100vh;
+    transition: 1.5s ease-out;
 
     .center {
         position: fixed;
@@ -23,7 +24,3 @@ section.result {
 
 }
 
-p.blackFont {
-    color: black;
-    font-weight: 300;
-}

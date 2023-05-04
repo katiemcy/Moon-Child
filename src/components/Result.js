@@ -11,7 +11,7 @@ import waningCrescent from "../media/waning-crecsent.jpg";
 const Result = (props) => {
 
     const returnFig = () => {
-        console.log(props.phaseName)
+
         const phaseImg = [
             newMoon, waxingCrescent, firstQuarter, waningGibbous, fullMoon, waxingGibbous, lastQuarter, waningCrescent
         ]
@@ -22,12 +22,12 @@ const Result = (props) => {
 
         for (let i = 0; i < phaseImg.length; i++) {
             if (phaseString[i] === props.phaseName){
-                return <figure><img src={phaseImg[i]} alt="new moon" /></figure>
+                return <figure><img src={phaseImg[i]} alt={phaseString[i]} /></figure>
             }
         }
     }
 
-
+// function to create resulting text element in black
     const assignClass = () => {
         const blackFontPhase = [
             "Waxing Gibbous", "Full Moon", "Waning Gibbous" 
@@ -49,7 +49,6 @@ const Result = (props) => {
     }
 
     assignClass()
-    console.log(assignClass)
 
     return (
         <section className="result">
