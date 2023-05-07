@@ -4,8 +4,11 @@ import { useState } from "react";
 
 import Moon from "./Moon";
 import Form from "./Form";
+import MoonResult from "./MoonResult";
 import Result from "./Result";
 import Quotes from "./Quotes";
+import SendEcho from './SendEcho';
+
 
 const UserSearch = () => {
 
@@ -18,6 +21,8 @@ const UserSearch = () => {
     const [ moonPhase, setMoonPhase ] = useState("");
 
     const [ displayResult, setDisplayResult ] = useState(false);
+
+    const [ clicked, setClicked ] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -82,6 +87,10 @@ const UserSearch = () => {
         }
     }
 
+    const handleClick = () => {
+        setClicked(true)
+    }
+
     return (
         <>
 
@@ -105,13 +114,29 @@ const UserSearch = () => {
 
             {
                 displayResult
-                ? <Result phaseName={moonPhase}/>
+                ? <>
+                    {clicked ? null : <Quotes phaseName={moonPhase}/> }
+                    <section className="result">
+                        <MoonResult phaseName={moonPhase} clicked={clicked}/>
+                        {
+                            clicked
+                            ? null
+                            : <div className="center">
+                                <Result 
+                                    phaseName={moonPhase}
+                                    birthday={birthday}/>
+                                <button onClick={handleClick}>Send Echo</button>
+                              </div>
+                        }
+
+                    </section>
+                  </>
                 : null
             }
             
             {
-                displayResult
-                ? <Quotes />
+                clicked
+                ? <SendEcho phaseName={moonPhase}/>
                 : null
             }
             

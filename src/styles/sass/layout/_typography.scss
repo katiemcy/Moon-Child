@@ -69,3 +69,8 @@ p.futureChild {
 p.blackFont {
     color: black;
 }
+
+p.resultBday {
+    @include fontSize(18);
+    font-weight: 300;
+}

@@ -36,9 +36,7 @@ const Form = (props) => {
                 <h2>What kind of moon child <Link to="/about" className='aboutLink'>&#9432;</Link> are you?</h2>
                 <p>Enter your birthday:</p>
 
-
                 <form className="birthdayForm" onSubmit={props.handleSubmit}>
-
 
                     <label htmlFor="birthYear" className="sr-only">Year</label> 
                     <select name="birthYear" id="birthYear" onChange={props.selectionChange} aria-describedby="error">

@@ -1,0 +1,28 @@
+form.echoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    input {
+        margin: 10px auto;
+        opacity: 0.5;
+    }
+}
+
+.enterName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submitEcho {
+    text-align: center;
+    select{
+        text-align: center;
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+}

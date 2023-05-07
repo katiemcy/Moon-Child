@@ -8,6 +8,7 @@ section.result {
         min-height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -18,9 +19,15 @@ section.result {
     
         p {
             text-align: center;
-            
+            margin: 10px 0;
+        }
+
+    }
+    
+    .echoMoon {
+        figure {
+            margin-top: 65vh;
         }
     }
-
 }
 

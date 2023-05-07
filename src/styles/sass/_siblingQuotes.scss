@@ -2,14 +2,13 @@ section.quotes {
     position: fixed;
     height: 100vh;
     width: 100%;
-    // z-index: -;
 
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         height: 100%;
-        padding: 30% 0;
+        padding: 15% 0;
 
         li {
             width: 50%;
